@@ -11,7 +11,6 @@ const MobileNav = () => {
   const router = useRouter(); // Using useRouter hook from Next.js to access the router object
 
   const [showConnectModal, setShowConnectModal] = useState(false); // State to manage the visibility of the connect modal
-
   const [activeTab, setActiveTab] = useState(() => { // State to manage the active tab based on the current route
     if (router.pathname === '/') {
       return 'home';
@@ -24,7 +23,6 @@ const MobileNav = () => {
   }});
 
   // Styles for the navigation component
-
   const style = {
     body: { // Styling for the main container
       display: 'flex', // Setting display property to flex
@@ -37,6 +35,7 @@ const MobileNav = () => {
       backgroundColor: 'gray', // Setting background color to gray
     },
     navigation: { // Styling for the navigation container
+      zIndex: 2,
       width: '100%', // Setting width to 100%
       height: '70px', // Setting height to 70px
       background: 'gray', // Setting background color to gray
@@ -168,13 +167,16 @@ const MobileNav = () => {
     connectIndicator: { // Styling for the connect indicator
       left: '80%', // Positioning indicator
     },
+    modal: {
+      zIndex: 3,
+    }
   };
 
   useEffect(() => { // Effect to handle route changes and update the active tab accordingly
     const handleRouteChange = (url) => { // Callback function to handle route changes
-      if (url === '/collections' && showConnectModal(false)) { // Checking if the route is '/collections' and hiding the connect modal
+      if (url === '/collections' && !showConnectModal) { // Checking if the route is '/collections' and connect modal is not shown
         setActiveTab('collections'); // Setting active tab to 'collections'
-      } else { // If the route is not '/collections'
+      } else { // If the route is not '/collections' or connect modal is shown
         setActiveTab('home'); // Setting active tab to 'home'
       }
     };
@@ -190,23 +192,21 @@ const MobileNav = () => {
   const handleTabClick = (tab) => {
     setActiveTab(tab); // Setting active tab to the clicked tab
     setShowConnectModal(tab === 'connect'); // Showing connect modal if the connect tab is clicked
-    if(setShowConnectModal(true)){ // Checking if connect modal is shown
-      handleTabClick('connect') // Handling click on the connect tab
-    }
   };
 
   // Function to handle click on the connect tab
   const handleConnectClick = () => {
     setShowConnectModal(true); // Showing connect modal
-    handleTabClick('connect'); // Handling click on the connect tab
+    setActiveTab('connect'); // Setting active tab to 'connect'
   };
 
   // Function to handle closing the modal
   const handleCloseModal = () => {
-    if (setShowConnectModal(false) && handle){ // Checking if connect modal is hidden
-      // Do something
-    }
     setShowConnectModal(false); // Hiding connect modal
+    // Set active tab back to previous one when closing the modal
+    if (router.pathname !== '/connect') {
+      router.push(router.pathname);
+    }
   };
 
   return (
@@ -260,7 +260,7 @@ const MobileNav = () => {
           </li>
         </ul>
         {/* Connect modal */}
-        {showConnectModal && <ConnectModal onClose={handleCloseModal} />}
+        {showConnectModal && <ConnectModal onClose={handleCloseModal}  style={style.modal}/>}
         {/* Indicator */}
         <div style={{ ...style.indicator, ...(style[activeTab + 'Indicator'] || {}) }}>
           <div style={style.indicatorIcon}>
