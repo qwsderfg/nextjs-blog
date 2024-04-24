@@ -1,15 +1,28 @@
-import React from 'react'
+import React from "react";
+import { IoClose } from "react-icons/io5";
 
 export default function ConnectModal({ visible, onClose }) {
+  const handleOnClose = () => {};
+  if (!visible) return null;
 
-    if(!visible) return null;
-
-    return (
-        <div class='fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex justify-center items-center'>
-            <div class='bg-white p-2 rounded'>
-                <p class=''>Connect Wallet</p>
-                <button onClick={onClose}>X</button>
-            </div>
+  return (
+    <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center">
+      <div class="bg-white p-2 rounded relative">
+        <div className="">
+          <IoClose
+            onClick={onClose}
+            className="h-9 w-9 absolute -right-5 -top-5 bg-white rounded shadow"
+          />
         </div>
-    )
+        <div>
+          <p class="inline-flex">Connect Wallet</p>
+        </div>
+        <div>
+          <div>
+            <button>Metamask</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
