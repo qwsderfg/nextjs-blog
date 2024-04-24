@@ -7,6 +7,7 @@ const collections = () => {
   return (
     <div class="bg-black h-screen w-screen ">
       <Banner></Banner>
+      <collectonsProfile></collectonsProfile>
     </div>
   );
 };
