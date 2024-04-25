@@ -7,7 +7,7 @@ export default function ConnectModal({ visible, onClose }) {
 
   return (
     <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center">
-      <div class="bg-white p-2 rounded relative">
+      <div class="bg-white p-2 rounded relative zIndex-96">
         <div className=" shadow ">
           <IoClose
             onClick={onClose}

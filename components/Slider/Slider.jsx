@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AiFillFire } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
 import images from "../../img";
+import Style from "./Slider.module.css";
 
 const Slider = ({ data }) => {
   const [idNumber, setIdNumber] = useState(0); // Initialize idNumber to 0
@@ -93,9 +94,10 @@ const Slider = ({ data }) => {
 
   return (
     <div className="slider">
-      <div className="-box">
+      <div className={Style.slider_box}>
+        {/* -box */}
         <div
-          className="-left"
+          className={Style.slider_box_left}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}

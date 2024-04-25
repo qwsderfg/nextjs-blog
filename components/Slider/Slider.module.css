@@ -1,0 +1,25 @@
+.slider_box {
+  margin: 0 auto;
+  padding-block: 8rem;
+  display: grid;
+  grid-template-columns: repeat(12 1fr);
+  align-items: center;
+}
+.slider_box_left {
+  grid-column: 1 /7;
+  grid-row: 1 /-1;
+  background-color: #282020;
+  box-shadow: black;
+  border-radius: 1rem;
+  padding: 2rem;
+  z-index: 25;
+  height: 90vh;
+}
+@media screen and (max-width: 65em) {
+  .slider_box {
+    width: 90%;
+    padding-top: 28rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
