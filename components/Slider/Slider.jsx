@@ -139,6 +139,11 @@ const Slider = ({ data }) => {
                   </p>
                 </div>
               </div>
+              <div>
+                <div>
+                  <Image src={sliderData[idNumber].nftImage} />{" "}
+                </div>
+              </div>
             </>
           )}
           <div className="-slider">
