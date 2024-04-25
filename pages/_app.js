@@ -10,7 +10,7 @@ import { NavBar } from "../components/cindex"
 const MyApp = ({ Component, pageProps }) => (
 
     <div >
-        <NavBar/>
+        <NavBar class="navbar"/>
         <Component {...pageProps} />
     </div>
 

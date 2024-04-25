@@ -119,7 +119,7 @@ import { useRouter } from 'next/router';
       </div>
     </div>
     <div class="block md:hidden ">
-      <MobileNav/>
+      <MobileNav />
     </div>
   </div>
 

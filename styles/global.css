@@ -31,6 +31,7 @@ body {
     Fira Sans,
     Droid Sans,
     Helvetica Neue,
+    'Rubik',
     sans-serif;
 }
 
@@ -73,6 +74,11 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.navbar {
+ z-index: 60;
+ position: fixed;
 }
 
 

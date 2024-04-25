@@ -14,37 +14,29 @@ const Slider = ({ data }) => {
     {
       title: "Yugi #369",
       id: 1,
-      name: "Yugi Labs",
       collection: "Yugies",
       price: "0.004 BTC",
-      image: images.YugiSq,
       nftImage: images.nft_image_1,
     },
     {
       title: "Knight #369",
       id: 2,
-      name: "lil nights",
       collection: "Newgies",
       price: "0.24 BTC",
-      image: images.user2,
       nftImage: images.nft_image_2,
     },
     {
       title: "Snake #369",
       id: 3,
-      name: "HTTOS",
       collection: "Spectra Snakes",
       price: "0.5 BTC",
-      image: images.user3,
       nftImage: images.nft_image_3,
     },
     {
       title: "Doggie",
       id: 4,
-      name: "Bandz",
       collection: "Errors",
       price: "0.064 BTC",
-      image: images.user4,
       nftImage: images.nft_image_4,
     },
     // Add more slider data as needed
@@ -52,23 +44,24 @@ const Slider = ({ data }) => {
 
   // Ensure that idNumber is within bounds of sliderData length and implement looping behavior
   useEffect(() => {
+    // Ensure idNumber is within bounds
     const lastIndex = sliderData.length - 1;
     if (idNumber < 0) {
-      setIdNumber(lastIndex); // Reset to last index if idNumber is negative
+      setIdNumber(lastIndex);
     } else if (idNumber > lastIndex) {
-      setIdNumber(0); // Reset to 0 if idNumber exceeds the last index
+      setIdNumber(0);
     }
   }, [idNumber, sliderData.length]);
 
   const handleNext = () => {
     setIdNumber((prevId) =>
-      prevId === sliderData.length - 1 ? 0 : prevId + 1,
+      prevId === sliderData.length - 1 ? 0 : prevId + 1
     );
   };
 
   const handlePrev = () => {
     setIdNumber((prevId) =>
-      prevId === 0 ? sliderData.length - 1 : prevId - 1,
+      prevId === 0 ? sliderData.length - 1 : prevId - 1
     );
   };
 
@@ -93,77 +86,61 @@ const Slider = ({ data }) => {
   };
 
   return (
-    <div className="slider">
-      <div className={Style.slider_box}>
-        {/* -box */}
-        <div
-          className={Style.slider_box_left}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-        >
-          {/* Check if sliderData[idNumber] exists before accessing its properties */}
-          {sliderData[idNumber] && (
-            <>
+    <div className={Style.slider}>
+      <div
+        className={Style.slider_box}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {sliderData[idNumber] && (
+          <>
+            <div className={Style.slider_box_left}>
               <h2>{sliderData[idNumber].title}</h2>
-              <div className="-creator">
-                <div className="-profile">
-                  <Image
-                    src={sliderData[idNumber].image}
-                    className="-img"
-                    width={50}
-                    height={50}
-                  />
-                  <div className="-img">
-                    <p>Creator</p>
-                    <h4>
-                      {sliderData[idNumber].name}{" "}
-                      <span>
-                        <MdVerified />
-                      </span>
-                    </h4>
-                  </div>
+              <div className={Style.slider_box_left_collection}>
+                <div className={Style.slider_box_left_collection_info}>
+                  <p>Collection:</p>
+                  <h4 className="flex">{sliderData[idNumber].collection}
+                    <MdVerified className=' m-1'/>
+                  </h4>
+                  
                 </div>
-                <div className="-collection">
-                  <AiFillFire className="-icon" />
-                  <div className="-info">
-                    <p>Collection</p>
-                    <h4>{sliderData[idNumber].collection}</h4>
-                  </div>
-                </div>
+                
               </div>
-
-              <div className="-bidding">
-                <div className="-box">
+              <div className={Style.slider_box_left_bidding}>
+                <div className={Style.slider_box_left_bidding_box}>
                   <small>Price</small>
                   <p>
                     {sliderData[idNumber].price} <span>$1353</span>
                   </p>
                 </div>
               </div>
-              <div>
-                <div>
-                  <Image src={sliderData[idNumber].nftImage} />{" "}
-                </div>
+            </div>
+            <div className={Style.slider_box_right}>
+              <div className={Style.slider_box_right_box}>
+                <Image
+                  src={sliderData[idNumber].nftImage}
+                  className={Style.slider_box_right_img}
+                  width={200}
+                  height={200}
+                />
               </div>
-            </>
-          )}
-          <div className="-slider">
-            {/* Render slider items */}
-            {sliderData.map((item, index) => (
-              <div
-                key={index}
-                className={`slide ${index === idNumber ? "active" : ""}`}
-              ></div>
-            ))}
-            {/* Navigation buttons (hidden on mobile) */}
-            <button className="prev hidden md:block" onClick={handlePrev}>
-              Previous
-            </button>
-            <button className="next hidden md:block" onClick={handleNext}>
-              Next
-            </button>
-          </div>
+            </div>
+          </>
+        )}
+        <div className="-slider">
+          {sliderData.map((item, index) => (
+            <div
+              key={index}
+              className={`slide ${index === idNumber ? "active" : ""}`}
+            ></div>
+          ))}
+          <button className="prev hidden md:block" onClick={handlePrev}>
+            Previous
+          </button>
+          <button className="next hidden md:block" onClick={handleNext}>
+            Next
+          </button>
         </div>
       </div>
     </div>
