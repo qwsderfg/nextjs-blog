@@ -25,7 +25,6 @@
   margin-bottom: 2rem;
   font-weight: 700;
 }
-
 .slider_box_left_collection {
   display: flex;
   align-items: center;
@@ -38,9 +37,10 @@
 
 .slider_box_left_bidding_box {
   border: 3px solid rgb(66, 49, 49);
-  padding: 0.5rem;
+  padding-left: 0.5rem;
   border-radius: 0.5rem;
   align-items: center;
+  
 }
 .slider_box_left_bidding_box p {
   font-weight: 500;

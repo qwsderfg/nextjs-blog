@@ -105,7 +105,7 @@ const Slider = ({ data }) => {
                 <div className={Style.slider_box_left_bidding_box}>
                   <small className="">Price</small>
                   <p>
-                    {sliderData[idNumber].price} <span>$1353</span>
+                    {sliderData[idNumber].price} <span className="felx-end">$1353</span>
                   </p>
                 </div>
               </div>
