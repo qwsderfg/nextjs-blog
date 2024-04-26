@@ -12,28 +12,24 @@ const Slider = ({ data }) => {
 
   const sliderData = data || [
     {
-      title: "Yugi #369",
       id: 1,
       collection: "Yugies",
       price: "0.004 BTC",
       nftImage: images.nft_image_1,
     },
     {
-      title: "Knight #369",
       id: 2,
       collection: "Newgies",
       price: "0.24 BTC",
       nftImage: images.nft_image_2,
     },
     {
-      title: "Snake #369",
       id: 3,
       collection: "Spectra Snakes",
       price: "0.5 BTC",
       nftImage: images.nft_image_3,
     },
     {
-      title: "Doggie",
       id: 4,
       collection: "Errors",
       price: "0.064 BTC",
@@ -55,13 +51,13 @@ const Slider = ({ data }) => {
 
   const handleNext = () => {
     setIdNumber((prevId) =>
-      prevId === sliderData.length - 1 ? 0 : prevId + 1
+      prevId === sliderData.length - 1 ? 0 : prevId + 1,
     );
   };
 
   const handlePrev = () => {
     setIdNumber((prevId) =>
-      prevId === 0 ? sliderData.length - 1 : prevId - 1
+      prevId === 0 ? sliderData.length - 1 : prevId - 1,
     );
   };
 
@@ -96,20 +92,18 @@ const Slider = ({ data }) => {
         {sliderData[idNumber] && (
           <>
             <div className={Style.slider_box_left}>
-              <h2>{sliderData[idNumber].title}</h2>
               <div className={Style.slider_box_left_collection}>
                 <div className={Style.slider_box_left_collection_info}>
                   <p>Collection:</p>
-                  <h4 className="flex">{sliderData[idNumber].collection}
-                    <MdVerified className=' m-1'/>
+                  <h4 className="flex text-2xl">
+                    {sliderData[idNumber].collection}
+                    <MdVerified className=" m-1" />
                   </h4>
-                  
                 </div>
-                
               </div>
               <div className={Style.slider_box_left_bidding}>
                 <div className={Style.slider_box_left_bidding_box}>
-                  <small>Price</small>
+                  <small className="">Price</small>
                   <p>
                     {sliderData[idNumber].price} <span>$1353</span>
                   </p>

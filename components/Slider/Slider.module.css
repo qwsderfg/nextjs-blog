@@ -2,6 +2,7 @@
 
 .slider_box {
   margin: 0 auto;
+  width: 80%;
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -10,16 +11,18 @@
 }
 
 .slider_box_left {
-  grid-column: 1 / span 7;
+  grid-column: 1 / -1; /* Modified to span across all columns */
   background-color: rgb(99, 78, 78);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 2rem;
+  margin-top: 10rem; /* Added margin-top to create space */
+  grid-row: 2; /* Added to make the box left appear below */
 }
 
 .slider_box_left h2 {
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-weight: 700;
 }
 
@@ -35,13 +38,17 @@
 
 .slider_box_left_bidding_box {
   border: 3px solid rgb(66, 49, 49);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
+  align-items: center;
 }
-
+.slider_box_left_bidding_box p {
+  font-weight: 500;
+}
 .slider_box_right {
-  grid-column: 7 / -1;
+  grid-column: 1 / span 7; /* Modified to span 7 columns */
   padding: 1rem;
+  margin-top: -1rem;
   background-color: rgb(99, 78, 78);
   border-radius: 2.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -51,7 +58,8 @@
   border-radius: 2rem;
   width: 100%;
 }
-.slider_box_left_collection_info h4{
+
+.slider_box_left_collection_info h4 {
   font-weight: 700;
 }
 
@@ -59,14 +67,17 @@
   .slider_box {
     padding: 1rem;
     grid-template-columns: 1fr;
+    width: 90%;
+    padding-top: 3rem;
+    gap: 1rem;
+  }
+
+  .slider_box_left,
+  .slider_box_right {
+    grid-column: 1 / -1; /* Modified to span across all columns */
   }
 
   .slider_box_left {
-    grid-column: 1 / -1;
-  }
-
-  .slider_box_right {
-    grid-column: 1 / -1;
-    margin-top: 2rem;
+    margin-top: -2.5rem; /* Added margin-top to create space */
   }
 }
