@@ -12,12 +12,16 @@
 
 .slider_box_left {
   grid-column: 1 / -1; /* Modified to span across all columns */
-  background-color: rgb(99, 78, 78);
+  border: 2px solid rgba(255, 255, 255, 0.01);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 2rem;
+  position: relative;
   margin-top: 10rem; /* Added margin-top to create space */
   grid-row: 2; /* Added to make the box left appear below */
+  background: radial-gradient(
+    700px circle at 132px 64px, rgba(255, 255, 255, 0.699), transparent 25%
+  );
 }
 
 .slider_box_left h2 {
@@ -25,10 +29,15 @@
   margin-bottom: 2rem;
   font-weight: 700;
 }
+.verlogo{
+  color: #ffffffd5;
+  margin: .25rem;
+}
 .slider_box_left_collection {
   display: flex;
   align-items: center;
   gap: 1rem;
+  color: #ffffffd5;
 }
 
 .slider_box_left_collection_icon {
@@ -36,10 +45,11 @@
 }
 
 .slider_box_left_bidding_box {
-  border: 3px solid rgb(66, 49, 49);
+  border: 3px solid hsla(0, 0%, 100%, 0.616);
   padding-left: 0.5rem;
   border-radius: 0.5rem;
   align-items: center;
+  color: #ffffffd5;
   
 }
 .slider_box_left_bidding_box p {
@@ -49,7 +59,7 @@
   grid-column: 1 / span 7; /* Modified to span 7 columns */
   padding: 1rem;
   margin-top: -1rem;
-  background-color: rgb(99, 78, 78);
+  background-color: #37474F;
   border-radius: 2.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
@@ -78,6 +88,6 @@
   }
 
   .slider_box_left {
-    margin-top: -2.5rem; /* Added margin-top to create space */
+    margin-top: -4.46rem; /* Added margin-top to create space */
   }
 }

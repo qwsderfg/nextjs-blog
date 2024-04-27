@@ -7,7 +7,7 @@ import images from "../img";
 const Home = () => {
   return (
     <div>
-      <div class="bg-[#282020] h-screen w-screen ">
+      <div class="bg-[#263238] h-screen w-screen ">
         <Slider/>
         {/*<NFTCard></NFTCard>*/}
 

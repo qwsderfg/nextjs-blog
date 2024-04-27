@@ -84,7 +84,7 @@ const MobileNav = () => {
     },
     icon: {
       // Styling for icons
-      color: "orange", // Setting icon color to orange
+      color: "#FF914D", // Setting icon color to orange
       fontSize: "1.5em", // Setting font size to 1.5em
       transition: "0.5s", // Adding transition effect
       marginBottom: "-30px", // Adjusting vertical position

@@ -97,7 +97,7 @@ const Slider = ({ data }) => {
                   <p>Collection:</p>
                   <h4 className="flex text-2xl">
                     {sliderData[idNumber].collection}
-                    <MdVerified className=" m-1" />
+                    <MdVerified className={Style.verlogo} />
                   </h4>
                 </div>
               </div>
