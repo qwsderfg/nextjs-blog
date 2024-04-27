@@ -5,11 +5,13 @@ import { HiOutlineCollection } from "react-icons/hi"; // Importing icons from th
 import { FaSearch } from "react-icons/fa"; // Importing icons from the react-icons library
 import ConnectModal from "../../ConnectModal/ConnectModal"; // Importing the ConnectModal component
 import { useRouter } from "next/router"; // Importing useRouter hook from Next.js to access the router object
+import Search from '../Search/Search'
 
 const MobileNav = () => {
   const router = useRouter(); // Using useRouter hook from Next.js to access the router object
 
   const [showConnectModal, setShowConnectModal] = useState(false); // State to manage the visibility of the connect modal
+ const [searchModal, setSearchModal] = useState(false);
   const [activeTab, setActiveTab] = useState(() => {
     // State to manage the active tab based on the current route
     if (router.pathname === "/") {
@@ -225,14 +227,19 @@ const MobileNav = () => {
     setShowConnectModal(true); // Showing connect modal
     setActiveTab("connect"); // Setting active tab to 'connect'
   };
+  const handleSearchOpen = () => {
+    setSearchModal(true);
+    handleTabClick("search");
+  }
 
   // Function to handle closing the modal
   const handleCloseModal = () => {
-    setShowConnectModal(false); // Hiding connect modal
+    setSearchModal(false);
+    setShowConnectModal(false);
+     // Hiding connect modal
     // Set active tab back to previous one when closing the modal
-    if (router.pathname !== "/connect") {
       router.push(router.pathname);
-    }
+   
   };
 
   return (
@@ -294,7 +301,7 @@ const MobileNav = () => {
             style={style.li}
             className={activeTab === "search" ? "active" : ""}
           >
-            <a href="#" onClick={() => handleTabClick("search")}>
+            <a  onClick={handleSearchOpen}>
               <span style={style.iconContainer}>
                 <FaSearch
                   style={activeTab === "search" ? style.activeIcon : style.icon}
@@ -374,6 +381,7 @@ const MobileNav = () => {
       </div>
       {/* Connect modal */}
       <ConnectModal onClose={handleCloseModal} visible={showConnectModal} />
+      <Search onClose={handleCloseModal} visible={searchModal}/>
     </div>
   );
 };

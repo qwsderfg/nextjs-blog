@@ -1,4 +1,3 @@
-import React from "react";
 import { IoClose } from "react-icons/io5";
 
 export default function ConnectModal({ visible, onClose }) {
@@ -6,16 +5,16 @@ export default function ConnectModal({ visible, onClose }) {
   if (!visible) return null;
 
   return (
-    <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-10">
-      <div class="bg-white p-2 rounded relative zIndex-96">
-        <div className=" shadow ">
+    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center">
+      <div className="bg-white p-2 rounded relative ">
+        <div className="shadow">
           <IoClose
             onClick={onClose}
-            className="h-9 w-9 absolute -right-5 -top-5 bg-white rounded shadow-2xl"
+            className="h-9 w-9 absolute -right-5 -top-5 bg-white rounded shadow-2xl "
           />
         </div>
         <div>
-          <p class="inline-flex">Connect Wallet</p>
+          <p className="inline-flex">Connect Wallet</p>
         </div>
         <div>
           <div>

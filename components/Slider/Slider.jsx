@@ -91,6 +91,16 @@ const Slider = ({ data }) => {
       >
         {sliderData[idNumber] && (
           <>
+          <div className={Style.slider_box_right}>
+              <div className={Style.slider_box_right_box}>
+                <Image
+                  src={sliderData[idNumber].nftImage}
+                  className={Style.slider_box_right_img}
+                  width={200}
+                  height={200}
+                />
+              </div>
+            </div>
             <div className={Style.slider_box_left}>
               <div className={Style.slider_box_left_collection}>
                 <div className={Style.slider_box_left_collection_info}>
@@ -110,16 +120,7 @@ const Slider = ({ data }) => {
                 </div>
               </div>
             </div>
-            <div className={Style.slider_box_right}>
-              <div className={Style.slider_box_right_box}>
-                <Image
-                  src={sliderData[idNumber].nftImage}
-                  className={Style.slider_box_right_img}
-                  width={200}
-                  height={200}
-                />
-              </div>
-            </div>
+            
           </>
         )}
         <div className="-slider">
