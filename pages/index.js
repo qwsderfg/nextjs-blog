@@ -9,6 +9,7 @@ const Home = () => {
     <div>
       <div class="bg-[#263238] h-screen w-screen ">
         <Slider/>
+        <Slider/>
         {/*<NFTCard></NFTCard>*/}
 
       </div>

@@ -12,16 +12,26 @@
 
 .slider_box_left {
   grid-column: 1 / -1; /* Modified to span across all columns */
-  border: 2px solid rgba(255, 255, 255, 0.01);
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.336);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
+  transform: translate3d(0, 0, 0);
+  z-index:1;
   margin-top: 10rem; /* Added margin-top to create space */
   grid-row: 2; /* Added to make the box left appear below */
   background: radial-gradient(
     700px circle at 132px 64px, rgba(255, 255, 255, 0.699), transparent 25%
   );
+}
+.slider_box_left .shadow {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  z-index: 0; /* Set a lower z-index than the modal */
 }
 
 .slider_box_left h2 {
@@ -62,6 +72,7 @@
   background-color: #37474F;
   border-radius: 2.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index:0;
 }
 
 .slider_box_right_img {

@@ -6,7 +6,7 @@ export default function ConnectModal({ visible, onClose }) {
   if (!visible) return null;
 
   return (
-    <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-10">
+    <div class="fixed inset-0 backdrop-blur-sm flex justify-center items-center">
       <div class="bg-white p-2 rounded relative zIndex-96">
         <div className=" shadow ">
           <IoClose
@@ -16,11 +16,6 @@ export default function ConnectModal({ visible, onClose }) {
         </div>
         <div>
           <p class="inline-flex">Connect Wallet</p>
-        </div>
-        <div>
-          <div>
-            <button>Metamask</button>
-          </div>
         </div>
       </div>
     </div>
