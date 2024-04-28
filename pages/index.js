@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <div>
       <div class="bg-[#263238] h-screen w-screen ">
+        <NFTCard/>
         <Slider/>
         <Slider/>
         {/*<NFTCard></NFTCard>*/}
