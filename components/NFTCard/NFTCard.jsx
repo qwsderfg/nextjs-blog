@@ -40,9 +40,9 @@ const NFTCard = ({ data }) => {
         <div className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px]">
           <div className="relative h-full w-full ">
             <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
-              <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
+              <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] ">
                   <svg viewBox="-10 -10 20 30" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M -10 -9 L -9 -10 L 9 -10 L 10 -9 L 10 19 l -1 1 L -9 20 L -10 19 L -10 7 L -8 7 L -7 8 L 7 8 L 8 7 L 8 -5 L 2 -5 L 1 -6 L -1 -8 L -7 -8 L -8 -7 L -8 7 L -10 7 L -10 -9" fill="rgba(255, 255, 255, 0.699)" stroke="none" stroke-width="0"/>
+                    <path d="M -10 -9 L -9 -10 L 9 -10 L 10 -9 L 10 19 l -1 1 L -9 20 L -10 19 L -10 7 L -8 7 L -7 8 L 7 8 L 8 7 L 8 -5 L 2 -5 L 1 -6 L -1 -8 L -7 -8 L -8 -7 L -8 7 L -10 7 L -10 -9" fill="none" stroke="none" stroke-width="0" className={Style.border_svg}/>
                   </svg>
               </div>
               <div className="absolute h-[66.75%] w-[87.93%] top-[4.45%] right-[6.21%] bottom-[28.8%] left-[5.86%] rounded-xl bg-gainsboro z-[1]" />

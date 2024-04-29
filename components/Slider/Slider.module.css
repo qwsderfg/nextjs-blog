@@ -19,7 +19,7 @@
   margin-top: 10rem; /* Added margin-top to create space */
   grid-row: 2; /* Added to make the box left appear below */
   background: radial-gradient(
-    700px circle at 132px 64px, rgba(255, 255, 255, 0.699), transparent 25%
+    700px circle at 132px 64px, #ffffffb2, transparent 25%
   );
 }
 
