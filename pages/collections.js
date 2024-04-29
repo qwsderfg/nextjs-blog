@@ -5,7 +5,7 @@ import { Banner, collectionProfile } from "../collectionsPage/collectionindex";
 
 const collections = () => {
   return (
-    <div class="bg-[#263238] h-screen w-screen ">
+    <div className=" h-screen w-screen ">
       <Banner></Banner>
       <collectonsProfile></collectonsProfile>
     </div>

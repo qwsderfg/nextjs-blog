@@ -7,7 +7,7 @@ import images from "../img";
 const Home = () => {
   return (
     <div>
-      <div class="bg-[#263238] h-screen w-screen ">
+      <div className=" h-screen w-screen ">
         <NFTCard/>
         <Slider/>
         <Slider/>

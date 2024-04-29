@@ -62,39 +62,39 @@ import { useRouter } from 'next/router';
  
 
   return (
-  <div class="w-full">
-    <div class="hidden md:block">
-      <div class=" relative mx-auto flex h-20 w-full items-center justify-between bg-zinc-200 px-">
+  <div className="w-full">
+    <div className="hidden md:block">
+      <div className=" relative mx-auto flex h-20 w-full items-center justify-between bg-zinc-200 px-">
         <div className='hidden md:block'>
             <a href="/">
-                <Image src={images.logo} alt='YugiMart' class='h-full max-w-48' />
+                <Image src={images.logo} alt='YugiMart' className='h-full max-w-48' />
             </a>
         </div>
-        <div class="flex-shrink flex-grow-0 justify-start pl-4">
-            <div class="inline-flex max-w-full items-center">
-                <div class="relative flex flex-shrink flex-grow-0 items-center rounded-full border-2 border-black px-1 py-2 pl-4">
+        <div className="flex-shrink flex-grow-0 justify-start pl-4">
+            <div className="inline-flex max-w-full items-center">
+                <div className="relative flex flex-shrink flex-grow-0 items-center rounded-full border-2 border-black px-1 py-2 pl-4">
                     <FaSearch />
-                    <input type="text" class="pl-4 bg-transparent placeholder-black border-0 border-transparent outline-none flex-grow" placeholder='Search...' />
+                    <input type="text" className="pl-4 bg-transparent placeholder-black border-0 border-transparent outline-none flex-grow" placeholder='Search...' />
                 </div>
             </div>
         </div>
-        <div class="flex-initial">
-          <div class='relative flex items-center justify-end m-4'>
-            <div class="mr-4 flex items-center m-4">
-              <Link class="inline-block rounded-full px-3 py-2 hover:bg-gray-200 m-2" href="/collections">
-                <b class="relative flex cursor-pointer items-center whitespace-nowrap">Collections</b>
+        <div className="flex-initial">
+          <div className='relative flex items-center justify-end m-4'>
+            <div className="mr-4 flex items-center m-4">
+              <Link className="inline-block rounded-full px-3 py-2 hover:bg-gray-200 m-2" href="/collections">
+                <b className="relative flex cursor-pointer items-center whitespace-nowrap">Collections</b>
               </Link>
-              <Link class="inline-block rounded-full px-3 py-2 hover:bg-gray-200 m-2" href="/leaderboard">
-                <b class="relative flex cursor-pointer items-center whitespace-nowrap">Leaderboard</b>
+              <Link className="inline-block rounded-full px-3 py-2 hover:bg-gray-200 m-2" href="/leaderboard">
+                <b className="relative flex cursor-pointer items-center whitespace-nowrap">Leaderboard</b>
               </Link>
-              <Link class="inline-block rounded-full px-3 py-2 hover:bg-gray-200 m-2" href="/activity">
-                <b class="relative flex cursor-pointer items-center whitespace-nowrap">Activity</b>
+              <Link className="inline-block rounded-full px-3 py-2 hover:bg-gray-200 m-2" href="/activity">
+                <b className="relative flex cursor-pointer items-center whitespace-nowrap">Activity</b>
               </Link>
             
-              <div class="relative block">
-                <button class="relative inline-block rounded-full px-3 py-2 hover:bg-gray-200" onClick={() => openNotification()}>
+              <div className="relative block">
+                <button className="relative inline-block rounded-full px-3 py-2 hover:bg-gray-200" onClick={() => openNotification()}>
                   <div className={Style.nav_container_right_notify}>
-                    <MdNotifications class="flex h-5 items-center"/>
+                    <MdNotifications className="flex h-5 items-center"/>
                     {notifications && (
                     <Notification />
                     )}
@@ -102,12 +102,12 @@ import { useRouter } from 'next/router';
                 </button>
               </div>
             </div>
-            <div class="block">
-              <div class="relative inline">
-                <div class="relative inline-flex items-center rounded-lg border px-2 hover:shadow-lg">
-                  <div class="block h-10 w-10 flex-shrink-0 flex-grow-0 pl-0 items-center">
+            <div className="block">
+              <div className="relative inline">
+                <div className="relative inline-flex items-center rounded-lg border px-2 hover:shadow-lg">
+                  <div className="block h-10 w-10 flex-shrink-0 flex-grow-0 pl-0 items-center">
                     <Image src={images.user1} alt="Profile" onClick={() => openProfile()}
-                    class="rounded-xl "/>
+                    className="rounded-xl "/>
                     {profile && <Profile/>}
                   </div>
                 </div>
@@ -118,7 +118,7 @@ import { useRouter } from 'next/router';
         </div>
       </div>
     </div>
-    <div class="block md:hidden  ">
+    <div className="block md:hidden  ">
       <MobileNav />
     </div>
   </div>

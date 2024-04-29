@@ -11,7 +11,7 @@ const MyApp = ({ Component, pageProps }) => (
 
     <div >
 
-        <NavBar class="relativ z-49"/>
+        <NavBar className="relativ z-49"/>
         <Component {...pageProps} />
     </div>
 
