@@ -38,20 +38,22 @@ const NFTCard = ({ data }) => {
       <section className="h-[382px] w-[329.5px] flex flex-col align-center rounded-lg max-w-full text-left text-xs text-black font-inter">
       <div className="self-stretch rounded-lg flex flex-col items-start justify-start py-[15px] pr-[31.5px] pl-[37px] relative gap-[272px] mq329:gap-[136px]">
         <div className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px]">
-          <div className="relative h-full w-full ">
+          <div className="relative">
+            <div className="rounded-lg">
+              <Image
+              className="absolute w-[81%] ml-[24px] pt-10 -top-4 z-0"
+              alt=""
+              src={images.nft_image_1}
+            /></div>
             <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
               <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] ">
                   <svg viewBox="-10 -10 20 30" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M -10 -9 L -9 -10 L 9 -10 L 10 -9 L 10 19 l -1 1 L -9 20 L -10 19 L -10 7 L -8 7 L -7 8 L 7 8 L 8 7 L 8 -5 L 2 -5 L 1 -6 L -1 -8 L -7 -8 L -8 -7 L -8 7 L -10 7 L -10 -9" fill="none" stroke="none" stroke-width="0" className={Style.border_svg}/>
+                    <path d="M-10-9-9-10 9-10 10-9 10 19l-1 1L-9 20-10 19-10 7-10-9ZM-7-8-8-7-8 7-7 8 7 8 8 7 8-4 7-5 2-5-1-8-7-8" fill="gray" stroke="none" stroke-width="0" className={Style.border_svg}/>
                   </svg>
               </div>
               <div className="absolute h-[66.75%] w-[87.93%] top-[4.45%] right-[6.21%] bottom-[28.8%] left-[5.86%] rounded-xl bg-gainsboro z-[1]" />
             </div>
-            <Image
-              className="absolute "
-              alt=""
-              src={images.nft_image_1}
-            />
+            
           </div>
           
         </div>

@@ -1,9 +1,10 @@
 .border_svg{
   border: 2px solid rgba(255, 255, 255, 0.336);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  background: radial-gradient(
+  position: absolute;
+  color: radial-gradient(
     700px circle at 132px 64px, #ffffffb2, transparent 25%
-  );
+  );;
 }
 .card_box {
     background-color: rgba(255, 255, 255, 0.336);
@@ -27,7 +28,7 @@
     padding: 2rem;
     margin-top: 10rem; /* Added margin-top to create space */
     background: radial-gradient(
-      700px circle at 132px 64px, rgba(255, 255, 255, 0.699), transparent 25%
+      700px circle at 132px 64px, #ffffffb2, transparent 25%
     );
   }
   
