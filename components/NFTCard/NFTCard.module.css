@@ -1,111 +1,99 @@
-.border_svg{
+/* Updated Slider CSS */
+.slider_box {
+  margin: 0 auto;
+  width: 80%;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.border_box_svg {
+  
+}
+
+.slider_box_left {
   border: 2px solid rgba(255, 255, 255, 0.336);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  color: radial-gradient(
-    700px circle at 132px 64px, #ffffffb2, transparent 25%
-  );;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-top: 10rem;
+  grid-row: 2;
+  background: radial-gradient(
+    700px circle at 132px 64px,
+    #ffffffb2,
+    transparent 25%
+  );
 }
-.card_box {
-    background-color: rgba(255, 255, 255, 0.336);
-    padding: 1rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    margin-bottom: 3rem;
-    width: 50%;
-  }
-  
-  .card_box_left1 {
-    
-    border: 2px solid rgba(255, 255, 255, 0.336);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    border-radius: 1rem;
-    padding: 2rem;
-    margin-top: 10rem; /* Added margin-top to create space */
-    background: radial-gradient(
-      700px circle at 132px 64px, #ffffffb2, transparent 25%
-    );
-  }
-  
-  .card_box_left h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    font-weight: 700;
-  }
-  .verlogo{
-    color: #ffffffd5;
-    margin: .25rem;
-  }
-  .card_box_left_collection {
-    display: flex;
-    align-items: center;
+
+.slider_box_left h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.verlogo {
+  color: #ffffffd5;
+  margin: 0.25rem;
+}
+
+.slider_box_left_collection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: #ffffffd5;
+}
+
+.slider_box_left_collection_icon {
+  font-size: 2rem;
+}
+
+.slider_box_left_bidding_box {
+  border: 3px solid hsla(0, 0%, 100%, 0.616);
+  padding-left: 0.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+  color: #ffffffd5;
+}
+
+.slider_box_left_bidding_box p {
+  font-weight: 500;
+}
+
+.slider_box_right1 {
+  grid-column: 1 / span 7;
+  padding: 1rem;
+  margin-top: -1rem;
+  background-color: #37474f;
+  border-radius: 2.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.slider_box_right_img1 {
+  border-radius: 2rem;
+  width: 100%;
+}
+
+.slider_box_left_collection_info h4 {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 65em) {
+  .slider_box {
+    padding: 5rem;
+    grid-template-columns: 1fr;
+    width: 90%;
+    padding-top: 3rem;
     gap: 1rem;
-    border-bottom-left-radius: 1rem;
-    margin-top: -18rem;
-    margin-left: 10rem;
-    color: #ffffffd5;
-    transform: skewX(45deg);
-    background-color: rgba(255, 255, 255, 0.521);
   }
 
-  
-  .card_box_left_collection_icon {
-    font-size: 2rem;
+  .slider_box_left,
+  .slider_box_right {
+    grid-column: 1 / -1;
   }
-  
-  .card_box_left_bidding_box {
-    border: 3px solid hsla(0, 0%, 100%, 0.616);
-    padding-left: 0.5rem;
-    border-radius: 0.5rem;
-    align-items: center;
-    color: #ffffffd5;
-    
+
+  .slider_box_left {
+    margin-top: -4.46rem;
   }
-  .card_box_left_bidding_box p {
-    font-weight: 500;
-  }
-  .card_box_right {
-   /* Modified to span 7 columns */
-    padding: 1rem;
-    background-color: #37474F;
-    border-radius: 2.5rem;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  }
-  
-  .card_box_right_img {
-    border-radius: 2rem;
-    width: 100%;
-  }
-  
-  .card_box_left_collection_info h4 {
-    font-weight: 700;
-  }
-  .card_box_left_collection_info p {
-    font-weight: 500;
-  }
-  .card_box_left_collection_info{
-    transform: skewX(-45deg);
-  }
-  @media screen and (max-width: 65em) {
-    .card_box {
-        align-items: center;
-      padding: 4rem;
-      grid-template-columns: 1fr;
-      width: 90%;
-      padding: 2rem;
-      gap: 1rem;
-      margin: 3rem;
-    }
-  
-    .card_box_left,
-    .card_box_right {
-      grid-column: 1 / -1; /* Modified to span across all columns */
-    }
-  
-  }
-  
+}

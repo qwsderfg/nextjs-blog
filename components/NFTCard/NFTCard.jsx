@@ -1,77 +1,173 @@
-import React from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import { AiFillFire } from "react-icons/ai";
 import { MdVerified } from "react-icons/md";
 import images from "../../img";
 import Style from "./NFTCard.module.css";
+import { title } from "process";
 
 const NFTCard = ({ data }) => {
-  const cardData = data || [
+  const [idNumber, setIdNumber] = useState(0); // Initialize idNumber to 0
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [touchEndX, setTouchEndX] = useState(0);
+
+  const sliderData = data || [
     {
       id: 1,
+      title: "Yugi #2104",
       collection: "Yugies",
       price: "0.004 BTC",
       nftImage: images.nft_image_1,
     },
     {
       id: 2,
+      title: "Newg #503",
       collection: "Newgies",
       price: "0.24 BTC",
       nftImage: images.nft_image_2,
     },
     {
       id: 3,
+      title: "Snake #4206",
       collection: "Spectra Snakes",
       price: "0.5 BTC",
       nftImage: images.nft_image_3,
     },
     {
       id: 4,
+      title: "Error #404",
       collection: "Errors",
       price: "0.064 BTC",
       nftImage: images.nft_image_1,
     },
     // Add more card data as needed
-  ];
+  ]; // Use passed data or initialize an empty array
+
+  // Ensure that idNumber is within bounds of sliderData length and implement looping behavior
+  useEffect(() => {
+    // Ensure idNumber is within bounds
+    const lastIndex = sliderData.length - 1;
+    if (idNumber < 0) {
+      setIdNumber(lastIndex);
+    } else if (idNumber > lastIndex) {
+      setIdNumber(0);
+    }
+  }, [idNumber, sliderData.length]);
+
+  const handleNext = () => {
+    setIdNumber((prevId) =>
+      prevId === sliderData.length - 1 ? 0 : prevId + 1,
+    );
+  };
+
+  const handlePrev = () => {
+    setIdNumber((prevId) =>
+      prevId === 0 ? sliderData.length - 1 : prevId - 1,
+    );
+  };
+
+  const handleTouchStart = (e) => {
+    setTouchStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (touchStartX - touchEndX > 50) {
+      // Swipe right to left
+      handleNext();
+    } else if (touchEndX - touchStartX > 50) {
+      // Swipe left to right
+      handlePrev();
+    }
+    setTouchStartX(0);
+    setTouchEndX(0);
+  };
 
   return (
-    <div className="w-full h-[800px] relative overflow-hidden flex flex-row items-start justify-center p-20 box-border leading-[normal] tracking-[normal]">
-      <section className="h-[382px] w-[329.5px] flex flex-col align-center rounded-lg max-w-full text-left text-xs text-black font-inter">
-      <div className="self-stretch rounded-lg flex flex-col items-start justify-start py-[15px] pr-[31.5px] pl-[37px] relative gap-[272px] mq329:gap-[136px]">
-        <div className="w-full h-full absolute !m-[0] top-[0px] right-[0px] bottom-[0px] left-[0px]">
-          <div className="relative">
-            <div className="rounded-lg">
-              <Image
-              className="absolute w-[81%] ml-[24px] pt-10 -top-4 z-0"
-              alt=""
-              src={images.nft_image_1}
-            /></div>
-            <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
-              <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] ">
-                  <svg viewBox="-10 -10 20 30" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M-10-9-9-10 9-10 10-9 10 19l-1 1L-9 20-10 19-10 7-10-9ZM-7-8-8-7-8 7-7 8 7 8 8 7 8-4 7-5 2-5-1-8-7-8" fill="gray" stroke="none" stroke-width="0" className={Style.border_svg}/>
-                  </svg>
-              </div>
-              <div className="absolute h-[66.75%] w-[87.93%] top-[4.45%] right-[6.21%] bottom-[28.8%] left-[5.86%] rounded-xl bg-gainsboro z-[1]" />
+    <div className={Style.card}>
+      <div
+        className={Style.slider_box}
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
+        {sliderData[idNumber] && (
+          <>
+            <div className={Style.border_box_svg}>
+              <svg viewBox="-10 -10 20 30" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{ stopColor: "#ff5733" }} />
+                    <stop offset="100%" style={{ stopColor: "#ffa500" }} />
+                  </linearGradient>
+                </defs>
+                <path
+                  d="M-10-9-9-10 9-10 10-9 10 19l-1 1L-9 20-10 19-10 7-10-9ZM-7-8-8-7-8 7-7 8 7 8 8 7 8-4 7-5 2-5-1-8-7-8"
+                  fill="url(#gradient)" // Use gradient fill
+                  stroke="none"
+                  strokeWidth="0"
+                  className={Style.border_svg}
+                />
+              </svg>
             </div>
-            
-          </div>
-          
-        </div>
-        <div className="self-stretch flex flex-row items-start justify-end">
-          <div className="w-[131px] relative font-semibold inline-block shrink-0 z-[4]">
-            <p className="m-0">Collection</p>
-            <p className="m-0 text-xl "> Yugies</p>
-          </div>
-        </div>
-        <div className="w-40 h-13 bottom-[3%]  mt-3 p-1 pl-1 mb-4 border-2 border-white rounded-md relative text-sm font-semibold text-white inline-block shrink-0 z-[4]">
-          <p className="m-0">Price</p>
-          <p className="m-0 ">0.053 BTC $3402</p>
+            <div className={Style.slider_box_right}>
+              <div className={Style.slider_box_right_box}>
+                <Image
+                  src={sliderData[idNumber].nftImage}
+                  className={Style.slider_box_right_img}
+                  width={200}
+                  height={200}
+                />
+              </div>
+            </div>
+
+            <div className={Style.slider_box_left}>
+              <div className={Style.slider_box_left_collection}>
+                <div className={Style.slider_box_left_collection_info}>
+                  <p>Collection</p>
+                  <h4 className="flex text-2xl">
+                    {sliderData[idNumber].collection}
+                    <MdVerified className={Style.verlogo} />
+                  </h4>
+                </div>
+              </div>
+              <div className={Style.slider_box_left_collection}>
+                <div className={Style.slider_box_left_collection_info}>
+                  <h4 className="flex text-2xl">
+                    {sliderData[idNumber].title}
+                  </h4>
+                </div>
+              </div>
+              <div className={Style.slider_box_left_bidding}>
+                <div className={Style.slider_box_left_bidding_box}>
+                  <small className="">Price</small>
+                  <p>
+                    {sliderData[idNumber].price}{" "}
+                    <span className="felx-end">$1353</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+        <div className="-card">
+          {sliderData.map((item, index) => (
+            <div
+              key={index}
+              className={`slide ${index === idNumber ? "active" : ""}`}
+            ></div>
+          ))}
+          <button className="prev hidden md:block" onClick={handlePrev}>
+            Previous
+          </button>
+          <button className="next hidden md:block" onClick={handleNext}>
+            Next
+          </button>
         </div>
       </div>
-      <div className="w-[400px] flex flex-row items-start justify-start py-0 px-[37px] box-border mt-[-145px] text-3xl text-white">
-        <b className="flex-1 relative z-[5]">Yugi #369</b>
-      </div>
-    </section>
     </div>
   );
 };
