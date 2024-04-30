@@ -1,29 +1,27 @@
 /* Updated Slider CSS */
-.slider_box {
-  margin: 0 auto;
+.slider_box_svg {
+  margin: 2rem auto;
   width: 80%;
-  padding: 2rem;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   align-items: center;
+  justify-content: center;
   gap: 2rem;
 }
 
-.border_box_svg {
-  
-}
+
 
 .slider_box_left {
-  border: 2px solid rgba(255, 255, 255, 0.336);
+  margin-top: -150%;
+
+  height: 20rem;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  border-radius: 1rem;
   padding: 2rem;
-  margin-top: 10rem;
   grid-row: 2;
   background: radial-gradient(
     700px circle at 132px 64px,
     #ffffffb2,
-    transparent 25%
+    transparent 30%
   );
 }
 
@@ -35,20 +33,29 @@
 
 .verlogo {
   color: #ffffffd5;
-  margin: 0.25rem;
+  margin: 0.4rem;
+  padding-top: .2rem;
+  font-size: 1.3rem;
 }
 
-.slider_box_left_collection {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+.slider_box_left_collection_info {
+  gap: .5rem;
   color: #ffffffd5;
-}
+  overflow: visible;
+  margin-right: -2.3rem;
 
-.slider_box_left_collection_icon {
-  font-size: 2rem;
 }
-
+.slider_box_left_collection{
+  margin-top: -1.7rem;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.7rem;
+}
+.slider_box_left_title {
+  align-items: center;
+  display: inline;
+  font-weight: 600;
+}
 .slider_box_left_bidding_box {
   border: 3px solid hsla(0, 0%, 100%, 0.616);
   padding-left: 0.5rem;
@@ -60,23 +67,23 @@
 .slider_box_left_bidding_box p {
   font-weight: 500;
 }
-
-.slider_box_right1 {
+.svg_div{
+  margin-top: -100%;
+}
+.slider_box_right {
   grid-column: 1 / span 7;
-  padding: 1rem;
-  margin-top: -1rem;
-  background-color: #37474f;
-  border-radius: 2.5rem;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  padding: 7%;
+  margin-top: 1rem;
 }
 
-.slider_box_right_img1 {
-  border-radius: 2rem;
+.slider_box_right_img {
+  border-radius: 1rem;
   width: 100%;
 }
 
 .slider_box_left_collection_info h4 {
   font-weight: 700;
+  font-size: 1.5rem;
 }
 
 @media screen and (max-width: 65em) {
@@ -94,6 +101,5 @@
   }
 
   .slider_box_left {
-    margin-top: -4.46rem;
   }
 }

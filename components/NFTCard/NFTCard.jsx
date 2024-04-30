@@ -97,32 +97,33 @@ const NFTCard = ({ data }) => {
         {sliderData[idNumber] && (
           <>
             <div className={Style.border_box_svg}>
-              <svg viewBox="-10 -10 20 30" xmlns="http://www.w3.org/2000/svg">
+              <div className={Style.slider_box_right}>
+                <div className={Style.slider_box_right_box}>
+                  <Image
+                    src={sliderData[idNumber].nftImage}
+                    className={Style.slider_box_right_img}
+                    width={160}
+                    height={160}
+                  />
+                </div>
+              </div>
+              <svg viewBox="-10 -10 20 30" xmlns="http://www.w3.org/2000/svg" className={Style.svg_div}>
                 <defs>
                   <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" style={{ stopColor: "#ff5733" }} />
-                    <stop offset="100%" style={{ stopColor: "#ffa500" }} />
+                    <stop offset="0%" style={{ stopColor: "rgba(255, 255, 255, 0.6)" }} />
+                    <stop offset="100%" style={{ stopColor: "rgba(255, 255, 255, 0.3)" }} />
                   </linearGradient>
                 </defs>
                 <path
                   d="M-10-9-9-10 9-10 10-9 10 19l-1 1L-9 20-10 19-10 7-10-9ZM-7-8-8-7-8 7-7 8 7 8 8 7 8-4 7-5 2-5-1-8-7-8"
-                  fill="url(#gradient)" // Use gradient fill
-                  stroke="none"
-                  strokeWidth="0"
+                  fill="url(#gradient)"
+                  stroke="rgba(255, 255, 255, 0.336)"
+                  strokeWidth="0.2"
                   className={Style.border_svg}
                 />
               </svg>
             </div>
-            <div className={Style.slider_box_right}>
-              <div className={Style.slider_box_right_box}>
-                <Image
-                  src={sliderData[idNumber].nftImage}
-                  className={Style.slider_box_right_img}
-                  width={200}
-                  height={200}
-                />
-              </div>
-            </div>
+            
 
             <div className={Style.slider_box_left}>
               <div className={Style.slider_box_left_collection}>
@@ -134,8 +135,8 @@ const NFTCard = ({ data }) => {
                   </h4>
                 </div>
               </div>
-              <div className={Style.slider_box_left_collection}>
-                <div className={Style.slider_box_left_collection_info}>
+              <div className={Style.slider_box_left_title}>
+                <div className={Style.slider_box_left_title_info}>
                   <h4 className="flex text-2xl">
                     {sliderData[idNumber].title}
                   </h4>
