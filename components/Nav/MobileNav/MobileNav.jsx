@@ -36,14 +36,14 @@ const MobileNav = () => {
       bottom: "0", // Positioning the container at the bottom of the viewport
       left: "0", // Positioning the container at the left of the viewport
       width: "100%", // Setting width to 100%
-      backgroundColor: "gray", // Setting background color to gray
+      backgroundColor: "#3d4f58", // Setting background color to #3d4f58
     },
     navigation: {
       // Styling for the navigation container
       zIndex: 98,
       width: "100%", // Setting width to 100%
       height: "70px", // Setting height to 70px
-      background: "gray", // Setting background color to gray
+      background: "#3d4f58", // Setting background color to #3d4f58
       display: "flex", // Setting display property to flex
       justifyContent: "space-between", // Distributing content evenly along the main axis
       alignItems: "center", // Aligning items to the center vertically
@@ -75,7 +75,7 @@ const MobileNav = () => {
       justifyContent: "center", // Aligning content to the center vertically
       alignItems: "center", // Aligning content to the center horizontally
       textDecoration: "none", // Removing text decoration
-      color: "gray", // Setting text color to gray
+      color: "#3d4f58", // Setting text color to #3d4f58
     },
     iconContainer: {
       // Styling for the container of icons
@@ -144,7 +144,7 @@ const MobileNav = () => {
       left: "", // Resetting left property
       width: "60px", // Setting width to 60px
       height: "60px", // Setting height to 60px
-      background: "gray", // Setting background color to gray
+      background: "#3d4f58", // Setting background color to #3d4f58
       borderRadius: "50%", // Adding border radius
       transition: "0.5s", // Adding transition effect
     },
@@ -155,7 +155,7 @@ const MobileNav = () => {
       left: "-26px", // Positioning element
       width: "30px", // Setting width to 30px
       height: "30px", // Setting height to 30px
-      boxShadow: "15px 18px gray", // Adding box shadow
+      boxShadow: "15px 18px #3d4f58", // Adding box shadow
       borderRadius: "50%", // Adding border radius
       background: "", // Removing background color
     },
@@ -166,7 +166,7 @@ const MobileNav = () => {
       left: "56px", // Positioning element
       width: "30px", // Setting width to 30px
       height: "30px", // Setting height to 30px
-      boxShadow: "-15px 18px gray", // Adding box shadow
+      boxShadow: "-15px 18px #3d4f58", // Adding box shadow
       borderRadius: "50%", // Adding border radius
       background: "", // Removing background color
     },

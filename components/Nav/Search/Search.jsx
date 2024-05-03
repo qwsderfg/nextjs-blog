@@ -25,7 +25,7 @@ export default function SearchModal({ visible, onClose }) {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-10 -mt-44">
+    <div className="fixed inset-0 backdrop-blur-sm flex justify-center items-center z-10">
       <div className="bg-white p-2 rounded-xl relative z-20 -mt-80">
         <div className="shadow">
           <IoClose

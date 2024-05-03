@@ -60,12 +60,12 @@
   padding: 1rem;
   margin-top: -1rem;
   background-color: #37474F;
-  border-radius: 2.5rem;
+  border-radius: 1.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .slider_box_right_img {
-  border-radius: 2rem;
+  border-radius: 1rem;
   width: 100%;
 }
 
