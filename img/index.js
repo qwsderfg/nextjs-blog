@@ -42,8 +42,12 @@ import nft_image_3 from "./nft-image-3.png";
 import musiceWave from "./musicwave.png";
 import update from "./update.png";
 import YugiSq from "./YugiSq.png"
+import MetaMask from "./MetaMask.png"
+import walletConnect from "./walletConnect.png"
 
 export default {
+  walletConnect,
+  MetaMask,
   YugiSq,
   collection,
   update,

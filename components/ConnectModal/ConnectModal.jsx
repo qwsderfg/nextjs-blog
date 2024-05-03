@@ -1,4 +1,6 @@
 import { IoClose } from "react-icons/io5";
+import Image from "next/image";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
 export default function ConnectModal({ visible, onClose }) {
   const handleOnClose = () => {};
@@ -18,7 +20,9 @@ export default function ConnectModal({ visible, onClose }) {
         </div>
         <div>
           <div>
-            <button>Metamask</button>
+            <Button colorScheme="blue" size="md">
+              Metamask
+            </Button>
           </div>
         </div>
       </div>
