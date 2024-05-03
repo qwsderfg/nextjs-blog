@@ -29,23 +29,28 @@ export default function ConnectModal({ visible, onClose }) {
             className="h-9 w-9 absolute -right-5 -top-5 bg-[#3d4f58] rounded shadow-md shadow-[] "
           />
         </div>
-        <div className={Style.wallet_box_provider}>
-          {providerArray.map((el, i) => (
-            <div
-              className={`${Style.wallet_box_provider_item} ${ activeBtn == i + 1 ? Style.active : ""}`}
-              key={i + 1}
-              onClick={() => setActiveBtn(i + 1)}
-            >
-              <Image
-                src={el.provider}
-                alt={el.provider}
-                width={50}
-                height={50}
-                className={Style.wallet_box_provider_item_img}
-              />
-              <p>{el.name}</p>
-            </div>
-          ))}
+        <div className="relative">
+          
+          <div className={Style.wallet_box_provider}>
+            {providerArray.map((el, i) => (
+              <div
+                className={`${Style.wallet_box_provider_item} ${ activeBtn == i + 1 ? Style.active : ""}`}
+                key={i + 1}
+                onClick={() => setActiveBtn(i + 1)}
+              >
+                <div className={Style.item_div}>
+                  <Image
+                    src={el.provider}
+                    alt={el.provider}
+                    width={50}
+                    height={50}
+                    className={Style.wallet_box_provider_item_img}
+                  />
+                  <p>{el.name}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

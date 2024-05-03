@@ -5,14 +5,17 @@
 }
 .wallet_box_provider_item {
   display: flex;
+  position: relative;
   align-items: center;
   gap: 1rem;
   border-radius: 1rem;
   margin-top: 2rem;
-  padding: 1rem;
+  padding: .2rem;
   background-color: #263238;
  margin-left: .5rem;
  margin-right: .5rem;
+ overflow: hidden;
+
 }
 .wallet_box_provider_item_img{
   border-radius: 30%;
@@ -22,4 +25,41 @@
  color: white;
   font-size: 1rem;
   line-height: 0;
+}
+.wallet_box_provider_item::after {
+  content: "";
+  position: absolute;
+  height: 15rem;
+  margin-left: -3rem;
+  width: 20rem;
+  background-image: conic-gradient(transparent,transparent,transparent,#f7892b);
+  animation: animate 8s linear infinite;  
+}
+.wallet_box_provider_item::before {
+  content: "";
+  position: absolute;
+  height: 15rem;
+  width: 20rem;
+margin-left: -3rem;
+  background-image: conic-gradient(transparent,transparent,transparent,#cf5e0f);
+  animation: animate 8s linear infinite; 
+  animation-delay: 3s; 
+}
+.item_div{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  z-index: 1;
+  background: #3d4f58;
+  border-radius: .9rem;
+  width: 17rem;
+  padding: .5rem;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
