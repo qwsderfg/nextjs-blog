@@ -1,0 +1,5 @@
+.wallet_box_provider {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -74,6 +74,9 @@
   padding: 7%;
   margin-top: 1rem;
 }
+.slider_box_right_box {
+  padding-top: 100%;
+}
 
 .slider_box_right_img {
   border-radius: 1rem;
