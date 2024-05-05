@@ -7,9 +7,10 @@
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   border-radius: 1rem;
-  margin-top: 2rem;
+  margin: 2rem;
   padding: .2rem;
   background-color: #263238;
  margin-left: .5rem;
@@ -26,33 +27,55 @@
   font-size: 1rem;
   line-height: 0;
 }
+
 .wallet_box_provider_item::after {
   content: "";
   position: absolute;
-  height: 15rem;
-  margin-left: -3rem;
-  width: 20rem;
-  background-image: conic-gradient(transparent,transparent,transparent,#f7892b);
+  height: 40rem;
+
+  width: 40rem;
+  background-image: conic-gradient(transparent,#f7892b,transparent,#f7892b);
   animation: animate 8s linear infinite;  
 }
 .wallet_box_provider_item::before {
   content: "";
   position: absolute;
-  height: 15rem;
-  width: 20rem;
-margin-left: -3rem;
-  background-image: conic-gradient(transparent,transparent,transparent,#cf5e0f);
+  height: 40rem;
+  width: 40rem;
+  background-image: conic-gradient(transparent,#cf5e0f,transparent,#cf5e0f);
   animation: animate 8s linear infinite; 
-  animation-delay: 3s; 
+  animation-delay: 4s; 
+}
+.wallet_box_provider_item:nth-child(2)::after,
+.wallet_box_provider_item:nth-child(2)::before {
+  background-image: conic-gradient(
+    transparent,
+    #2b4af7,
+    transparent,
+    #2b4af7
+  );
+  animation: animate 8s linear infinite;
+}
+
+.wallet_box_provider_item:nth-child(2)::before {
+  background-image: conic-gradient(
+    transparent,
+    #1989f1,
+    transparent,
+    #1989f1
+  );
+  animation: animate 8s linear infinite;
+  animation-delay: 4s;
 }
 .item_div{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   z-index: 1;
   background: #3d4f58;
   border-radius: .9rem;
-  width: 17rem;
+  width: 100%;
   padding: .5rem;
 }
 @keyframes animate {
