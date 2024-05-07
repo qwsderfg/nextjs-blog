@@ -1,7 +1,6 @@
 .wallet_box_provider {
   justify-content: center;
   overflow: hidden;
-
 }
 .wallet_box_provider_item {
   display: flex;
@@ -11,19 +10,18 @@
   gap: 1rem;
   border-radius: 1rem;
   margin: 2rem;
-  padding: .2rem;
+  padding: 0.2rem;
   background-color: #263238;
- margin-left: .5rem;
- margin-right: .5rem;
- overflow: hidden;
-
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
 }
-.wallet_box_provider_item_img{
+.wallet_box_provider_item_img {
   border-radius: 30%;
 }
 .wallet_box_provider_item p {
- font-weight: 520;
- color: white;
+  font-weight: 520;
+  color: white;
   font-size: 1rem;
   line-height: 0;
 }
@@ -34,49 +32,39 @@
   height: 40rem;
 
   width: 40rem;
-  background-image: conic-gradient(transparent,#f7892b,transparent,#f7892b);
-  animation: animate 8s linear infinite;  
+  background-image: conic-gradient(transparent, #f7892b, transparent, #f7892b);
+  animation: animate 8s linear infinite;
 }
 .wallet_box_provider_item::before {
   content: "";
   position: absolute;
   height: 40rem;
   width: 40rem;
-  background-image: conic-gradient(transparent,#cf5e0f,transparent,#cf5e0f);
-  animation: animate 8s linear infinite; 
-  animation-delay: 4s; 
+  background-image: conic-gradient(transparent, #cf5e0f, transparent, #cf5e0f);
+  animation: animate 8s linear infinite;
+  animation-delay: 4s;
 }
 .wallet_box_provider_item:nth-child(2)::after,
 .wallet_box_provider_item:nth-child(2)::before {
-  background-image: conic-gradient(
-    transparent,
-    #2b4af7,
-    transparent,
-    #2b4af7
-  );
+  background-image: conic-gradient(transparent, #2b4af7, transparent, #2b4af7);
   animation: animate 8s linear infinite;
 }
 
 .wallet_box_provider_item:nth-child(2)::before {
-  background-image: conic-gradient(
-    transparent,
-    #1989f1,
-    transparent,
-    #1989f1
-  );
+  background-image: conic-gradient(transparent, #1989f1, transparent, #1989f1);
   animation: animate 8s linear infinite;
   animation-delay: 4s;
 }
-.item_div{
+.item_div {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
   z-index: 1;
   background: #3d4f58;
-  border-radius: .9rem;
+  border-radius: 0.9rem;
   width: 100%;
-  padding: .5rem;
+  padding: 0.5rem;
 }
 @keyframes animate {
   0% {
