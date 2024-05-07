@@ -12,7 +12,6 @@ import { HiOutlineCollection } from "react-icons/hi";
 import { FaSearch } from "react-icons/fa";
 import { TiThMenuOutline } from "react-icons/ti";
 //Internal
-import Style from "./NavBar.module.css"
 import {Notification, Profile, sidebar, Collections, MobileNav} from './index'
 import {button} from '../cindex'
 import images from '../../img'
@@ -93,7 +92,7 @@ import { useRouter } from 'next/router';
             
               <div className="relative block">
                 <button className="relative inline-block rounded-full px-3 py-2 hover:bg-gray-200" onClick={() => openNotification()}>
-                  <div className={Style.nav_container_right_notify}>
+                  <div >
                     <MdNotifications className="flex h-5 items-center"/>
                     {notifications && (
                     <Notification />
