@@ -1,14 +1,10 @@
-/* Updated Slider CSS */
-.border_svg {
-  margin: 2rem auto;
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
+
+.card{
+  display: flex;
+  margin-top: -35%;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
 }
-
 .slider_box_left {
   margin-top: -150%;
   background: rgba(128, 128, 128, 0.411);
@@ -24,42 +20,46 @@
 }
 
 .verlogo {
-  color: #ffffffd5;
-  margin: 0.4rem;
+  color: #263238;
+  margin: 0.2rem;
   padding-top: 0.2rem;
   font-size: 1.3rem;
 }
 
 .slider_box_left_collection_info {
   gap: 0.5rem;
-  color: #ffffffd5;
+  color: #263238;
   overflow: visible;
-  margin-right: -2.3rem;
+  margin-left: 57%;
+}
+.slider_box_left_collection_info p {
+margin-left: -20%;
 }
 .slider_box_left_collection {
-  margin-top: -1.7rem;
-  grid-column: span 3;
-  grid-column-start: 2;
+  margin-top: -147%;
   font-size: 0.7rem;
 }
 .slider_box_left_title {
-  grid-column: span 4;
-  grid-row: 3;
+  color: #263238 ;
+  white-space: nowrap;
+  width: 100%;
+  margin: 1.5rem;
+  margin-top: 72%;
   font-weight: 600;
-}
-.slider_box_left_bidding {
-  grid-column: span 4;
-  grid-row: 4;
+  font-size: 1.3rem;
 }
 .slider_box_left_bidding_box {
+  margin: 1.4rem;
+  margin-top: -12%;
+  display: relative;
   border: 3px solid hsla(0, 0%, 100%, 0.616);
   padding-left: 0.5rem;
   border-radius: 0.5rem;
-  color: #ffffffd5;
+  color: #263238;
+  white-space: nowrap;
 }
-
 .slider_box_left_bidding_box p {
-  font-weight: 500;
+  font-weight: 600;
 }
 .svg_div {
   margin-top: -100%;
@@ -79,7 +79,8 @@
 
 .slider_box_left_collection_info h4 {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 5vw;
+  margin-top: -.5rem;
 }
 
 @media screen and (max-width: 65em) {
@@ -89,7 +90,7 @@
     width: 90%;
     height: auto;
     padding-top: 3rem;
-    gap: 1rem;
+    gap: .5rem;
   }
 
   .slider_box_left,

@@ -122,14 +122,10 @@ const NFTCard = ({ data }) => {
                   className={Style.border_svg}
                 />
               </svg>
-            </div>
-            
-
-            <div className={Style.slider_box_left}>
               <div className={Style.slider_box_left_collection}>
                 <div className={Style.slider_box_left_collection_info}>
                   <p>Collection</p>
-                  <h4 className="flex text-2xl">
+                  <h4 className="flex items-center">
                     {sliderData[idNumber].collection}
                     <MdVerified className={Style.verlogo} />
                   </h4>
@@ -137,7 +133,7 @@ const NFTCard = ({ data }) => {
               </div>
               <div className={Style.slider_box_left_title}>
                 <div className={Style.slider_box_left_title_info}>
-                  <h4 className="flex text-2xl">
+                  <h4 >
                     {sliderData[idNumber].title}
                   </h4>
                 </div>
@@ -147,11 +143,16 @@ const NFTCard = ({ data }) => {
                   <small className="">Price</small>
                   <p>
                     {sliderData[idNumber].price}{" "}
-                    <span className="felx-end">$1353</span>
+                    <span > $1353</span>
                   </p>
                 </div>
               </div>
+              
+              
             </div>
+            
+
+            
           </>
         )}
         <div className="-card">
