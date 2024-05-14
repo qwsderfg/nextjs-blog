@@ -41,16 +41,15 @@ margin-left: -20%;
 }
 .slider_box_left_title {
   color: #263238 ;
-  white-space: nowrap;
   width: 100%;
   margin: 1.5rem;
-  margin-top: 72%;
+  margin-top: 70%;
   font-weight: 600;
   font-size: 1.3rem;
 }
 .slider_box_left_bidding_box {
-  margin: 1.4rem;
-  margin-top: -12%;
+  margin: .8rem;
+  margin-top: -5vw;
   display: relative;
   border: 3px solid hsla(0, 0%, 100%, 0.616);
   padding-left: 0.5rem;
@@ -60,6 +59,7 @@ margin-left: -20%;
 }
 .slider_box_left_bidding_box p {
   font-weight: 600;
+  min-width: fit-content;
 }
 .svg_div {
   margin-top: -100%;
@@ -75,6 +75,8 @@ margin-left: -20%;
 .slider_box_right_img {
   border-radius: 1rem;
   width: 100%;
+  height: 70%;
+  object-fit: cover;
 }
 
 .slider_box_left_collection_info h4 {
@@ -97,4 +99,9 @@ margin-left: -20%;
   .slider_box_right {
     grid-column: 1 / -1;
   }
+
+  .slider_box_left_title {
+    font-size: 5vw;
+  }
+
 }

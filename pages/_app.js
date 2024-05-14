@@ -1,4 +1,3 @@
-import { ChakraProvider } from '@chakra-ui/react'
 import Image from 'next/image'
 import images from '../img'
 import { Component } from "react"
